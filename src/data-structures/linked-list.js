@@ -80,13 +80,11 @@ class LinkedList {
       return this.head;
     }
     let node = this.head.prev;
-    while (node) {
-      if (node.value === value) {
+    return this.iterate(node, (target) => {
+      if (target.value === value) {
         return node;
       }
-      node = node.prev;
-    }
-    return null;
+    });
   }
 
   iterate(start, onNode) {
