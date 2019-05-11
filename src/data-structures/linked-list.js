@@ -104,9 +104,9 @@ class LinkedList {
   toString() {
     let string = '';
     this.iterate(this.head, (node) => {
-      if (this._isHead(node)) {
+      if (node.isHead()) {
         string += '(HEAD): ';
-      } else if (this._isTail(node)) {
+      } else if (node.isTail()) {
         string += '(TAIL): ';
       } else {
         string += '(LINK): ';
